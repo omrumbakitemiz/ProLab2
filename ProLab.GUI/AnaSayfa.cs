@@ -2,15 +2,14 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Security.Cryptography.X509Certificates;
 
 namespace ProLab.GUI
 {
-    public partial class HomePage : Form
+    public partial class AnaSayfa : Form
     {
         public string KullaniciAdi { get; set; }
 
-        public HomePage(string kullaniciAdi)
+        public AnaSayfa(string kullaniciAdi)
         {
             InitializeComponent();
             this.KullaniciAdi = kullaniciAdi;
@@ -86,12 +85,12 @@ namespace ProLab.GUI
         private void HomePage_Load(object sender, EventArgs e)
         {
             //Kayit_Ekle();
-            Kayit_Getir();
+            //Kayit_Getir();
         }
 
         private void btn_kayitEkleEkrani_Click(object sender, EventArgs e)
         {
-            AddVehicle addRecord = new AddVehicle(KullaniciAdi);
+            AracEkle addRecord = new AracEkle(KullaniciAdi);
 
             Hide();
             addRecord.Show();
@@ -99,10 +98,15 @@ namespace ProLab.GUI
 
         private void btn_kayitGoruntule_Click(object sender, EventArgs e)
         {
-            DetailsPage detailsPage = new DetailsPage();
+            DetaySayfası detailsPage = new DetaySayfası();
 
             Hide();
             detailsPage.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Kayit_Getir();
         }
     }
 }

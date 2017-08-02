@@ -1,6 +1,6 @@
 ﻿namespace ProLab.GUI
 {
-    partial class AddVehicle
+    partial class AracEkle
     {
         /// <summary>
         /// Required designer variable.

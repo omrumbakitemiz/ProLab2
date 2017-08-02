@@ -32,8 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,59 +54,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddRepairingRecord.cs">
+    <Compile Include="Data\Context\TamirhaneDBContext.cs" />
+    <Compile Include="Data\Models\Arac.cs" />
+    <Compile Include="Data\Models\ElektrikIslemi.cs" />
+    <Compile Include="Data\Models\KaportaIslemi.cs" />
+    <Compile Include="Data\Models\LastikIslemi.cs" />
+    <Compile Include="Data\Models\MotorIslemi.cs" />
+    <Compile Include="Data\Models\Tamirhane.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="TamirKaydıEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddRepairingRecord.Designer.cs">
-      <DependentUpon>AddRepairingRecord.cs</DependentUpon>
+    <Compile Include="TamirKaydıEkle.Designer.cs">
+      <DependentUpon>TamirKaydıEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetailsPage.cs">
+    <Compile Include="DetaySayfası.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DetailsPage.Designer.cs">
-      <DependentUpon>DetailsPage.cs</DependentUpon>
+    <Compile Include="DetaySayfası.Designer.cs">
+      <DependentUpon>DetaySayfası.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\IRepairJob.cs" />
-    <Compile Include="Models\Vehicle.cs" />
-    <Compile Include="AddVehicle.cs">
+    <Compile Include="AracEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddVehicle.Designer.cs">
-      <DependentUpon>AddVehicle.cs</DependentUpon>
+    <Compile Include="AracEkle.Designer.cs">
+      <DependentUpon>AracEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.cs">
+    <Compile Include="AnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.cs">
+    <Compile Include="Giris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPage.Designer.cs">
-      <DependentUpon>LoginPage.cs</DependentUpon>
+    <Compile Include="Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Body.cs" />
-    <Compile Include="Models\Electric.cs" />
-    <Compile Include="Models\Engine.cs" />
-    <Compile Include="Models\RepairShop.cs" />
-    <Compile Include="Models\Tire.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddRepairingRecord.resx">
-      <DependentUpon>AddRepairingRecord.cs</DependentUpon>
+    <EmbeddedResource Include="TamirKaydıEkle.resx">
+      <DependentUpon>TamirKaydıEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddVehicle.resx">
-      <DependentUpon>AddVehicle.cs</DependentUpon>
+    <EmbeddedResource Include="AracEkle.resx">
+      <DependentUpon>AracEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DetailsPage.resx">
-      <DependentUpon>DetailsPage.cs</DependentUpon>
+    <EmbeddedResource Include="DetaySayfası.resx">
+      <DependentUpon>DetaySayfası.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPage.resx">
-      <DependentUpon>LoginPage.cs</DependentUpon>
+    <EmbeddedResource Include="Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,6 +118,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,5 +132,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

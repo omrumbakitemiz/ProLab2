@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace ProLab.GUI
 {
-    public partial class LoginPage : Form
+    public partial class Giris : Form
     {
-        public LoginPage()
+        public Giris()
         {
             InitializeComponent();
         }
@@ -17,7 +17,7 @@ namespace ProLab.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            HomePage homePage = new HomePage(txtbox_kullaniciAdi.Text);
+            AnaSayfa homePage = new AnaSayfa(txtbox_kullaniciAdi.Text);
 
             Hide();
 

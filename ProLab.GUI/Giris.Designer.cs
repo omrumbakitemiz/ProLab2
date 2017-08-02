@@ -1,6 +1,6 @@
 ﻿namespace ProLab.GUI
 {
-    partial class LoginPage
+    partial class Giris
     {
         /// <summary>
         /// Required designer variable.

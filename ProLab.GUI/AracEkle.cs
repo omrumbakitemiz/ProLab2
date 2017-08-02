@@ -3,14 +3,14 @@ using System.Windows.Forms;
 
 namespace ProLab.GUI
 {
-    public partial class AddVehicle : Form
+    public partial class AracEkle : Form
     {
         public string KullaniciAdi { get; set; }
         public string Plaka { get; set; }
         public string Model { get; set; }
         public string Marka { get; set; }
 
-        public AddVehicle(string kullaniciAdi)
+        public AracEkle(string kullaniciAdi)
         {
             InitializeComponent();
             KullaniciAdi = kullaniciAdi;
@@ -39,7 +39,7 @@ namespace ProLab.GUI
             */
             if (check)
             {
-                AddRepairingRecord addRepairingRecord = new AddRepairingRecord(Plaka, Marka, Model);
+                TamirKaydıEkle addRepairingRecord = new TamirKaydıEkle(Plaka, Marka, Model);
 
                 Hide();
                 addRepairingRecord.Show();

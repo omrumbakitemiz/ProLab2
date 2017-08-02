@@ -1,6 +1,6 @@
 ﻿namespace ProLab.GUI
 {
-    partial class DetailsPage
+    partial class DetaySayfası
     {
         /// <summary>
         /// Required designer variable.

@@ -13,8 +13,8 @@ namespace ProLab.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AddRepairingRecord("41AZ2314","BMW","X5"));
-            Application.Run(new LoginPage());
+            //Application.Run(new AnaSayfa("user1"));
+            Application.Run(new TamirKaydıEkle("","",""));
         }
     }
 }
