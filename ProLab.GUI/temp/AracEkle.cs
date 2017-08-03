@@ -39,7 +39,7 @@ namespace ProLab.GUI
             */
             if (check)
             {
-                TamirKaydıEkle addRepairingRecord = new TamirKaydıEkle(Plaka, Marka, Model);
+                TamirKaydıEkle addRepairingRecord = new TamirKaydıEkle();
 
                 Hide();
                 addRepairingRecord.Show();

@@ -61,6 +61,12 @@
     <Compile Include="Data\Models\LastikIslemi.cs" />
     <Compile Include="Data\Models\MotorIslemi.cs" />
     <Compile Include="Data\Models\Tamirhane.cs" />
+    <Compile Include="KayitDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KayitDuzenle.Designer.cs">
+      <DependentUpon>KayitDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="TamirKaydıEkle.cs">
       <SubType>Form</SubType>
@@ -68,45 +74,48 @@
     <Compile Include="TamirKaydıEkle.Designer.cs">
       <DependentUpon>TamirKaydıEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetaySayfası.cs">
+    <Compile Include="AracArama.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DetaySayfası.Designer.cs">
-      <DependentUpon>DetaySayfası.cs</DependentUpon>
+    <Compile Include="AracArama.Designer.cs">
+      <DependentUpon>AracArama.cs</DependentUpon>
     </Compile>
-    <Compile Include="AracEkle.cs">
+    <Compile Include="temp\AracEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AracEkle.Designer.cs">
+    <Compile Include="temp\AracEkle.Designer.cs">
       <DependentUpon>AracEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnaSayfa.cs">
+    <Compile Include="SecimSayfasi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnaSayfa.Designer.cs">
-      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    <Compile Include="SecimSayfasi.Designer.cs">
+      <DependentUpon>SecimSayfasi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giris.cs">
+    <Compile Include="temp\Giris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giris.Designer.cs">
+    <Compile Include="temp\Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="KayitDuzenle.resx">
+      <DependentUpon>KayitDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TamirKaydıEkle.resx">
       <DependentUpon>TamirKaydıEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AracEkle.resx">
+    <EmbeddedResource Include="temp\AracEkle.resx">
       <DependentUpon>AracEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DetaySayfası.resx">
-      <DependentUpon>DetaySayfası.cs</DependentUpon>
+    <EmbeddedResource Include="AracArama.resx">
+      <DependentUpon>AracArama.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnaSayfa.resx">
-      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    <EmbeddedResource Include="SecimSayfasi.resx">
+      <DependentUpon>SecimSayfasi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giris.resx">
+    <EmbeddedResource Include="temp\Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -10,18 +10,13 @@ namespace ProLab.GUI
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            AnaSayfa homePage = new AnaSayfa(txtbox_kullaniciAdi.Text);
+            SecimSayfasi anaSayfa = new SecimSayfasi();
 
             Hide();
 
-            homePage.Show();
+            anaSayfa.Show();
         }
     }
 }

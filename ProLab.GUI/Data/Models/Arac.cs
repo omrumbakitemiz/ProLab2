@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,7 +10,7 @@ namespace ProLab.GUI.Data.Models
         public string Plaka { get; set; }
 
         [Key, Column(Order = 1)]
-        public DateTime Tarih { get; set; }
+        public string Tarih { get; set; }
         public string Marka { get; set; }
         public string Model { get; set; }
 

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ProLab.GUI.Data.Models;
 
 namespace ProLab.GUI.Data.Context
@@ -12,7 +7,7 @@ namespace ProLab.GUI.Data.Context
     public class TamirhaneDBContext : DbContext
     {
         public TamirhaneDBContext() : 
-            base("name=ConnStrAzure") {}
+            base("name=LocalDB") {}
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

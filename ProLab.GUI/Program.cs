@@ -13,8 +13,9 @@ namespace ProLab.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AnaSayfa("user1"));
-            Application.Run(new TamirKaydıEkle("","",""));
+            //Application.Run(new TamirKaydıEkle());
+            //Application.Run(new AracArama());
+            Application.Run(new SecimSayfasi());
         }
     }
 }
