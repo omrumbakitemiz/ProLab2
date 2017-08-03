@@ -60,13 +60,6 @@
     <Compile Include="Data\Models\KaportaIslemi.cs" />
     <Compile Include="Data\Models\LastikIslemi.cs" />
     <Compile Include="Data\Models\MotorIslemi.cs" />
-    <Compile Include="Data\Models\Tamirhane.cs" />
-    <Compile Include="KayitDuzenle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KayitDuzenle.Designer.cs">
-      <DependentUpon>KayitDuzenle.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="TamirKaydıEkle.cs">
       <SubType>Form</SubType>
@@ -80,43 +73,22 @@
     <Compile Include="AracArama.Designer.cs">
       <DependentUpon>AracArama.cs</DependentUpon>
     </Compile>
-    <Compile Include="temp\AracEkle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="temp\AracEkle.Designer.cs">
-      <DependentUpon>AracEkle.cs</DependentUpon>
-    </Compile>
     <Compile Include="SecimSayfasi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SecimSayfasi.Designer.cs">
       <DependentUpon>SecimSayfasi.cs</DependentUpon>
     </Compile>
-    <Compile Include="temp\Giris.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="temp\Giris.Designer.cs">
-      <DependentUpon>Giris.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="KayitDuzenle.resx">
-      <DependentUpon>KayitDuzenle.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TamirKaydıEkle.resx">
       <DependentUpon>TamirKaydıEkle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="temp\AracEkle.resx">
-      <DependentUpon>AracEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AracArama.resx">
       <DependentUpon>AracArama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SecimSayfasi.resx">
       <DependentUpon>SecimSayfasi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="temp\Giris.resx">
-      <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

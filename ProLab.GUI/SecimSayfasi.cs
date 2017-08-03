@@ -7,8 +7,6 @@ namespace ProLab.GUI
 {
     public partial class SecimSayfasi : Form
     {
-        private string KullaniciAdi { get; set; }
-
         public SecimSayfasi()
         {
             InitializeComponent();
@@ -28,14 +26,6 @@ namespace ProLab.GUI
 
             Hide();
             aracArama.Show();
-        }
-
-        private void btn_kayitDuzenle_Click(object sender, EventArgs e)
-        {
-            Hide();
-
-            KayitDuzenle kayitDuzenle = new KayitDuzenle();
-            kayitDuzenle.Show();
         }
     }
 }

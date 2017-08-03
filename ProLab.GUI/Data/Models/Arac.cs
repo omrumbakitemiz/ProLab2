@@ -1,15 +1,13 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProLab.GUI.Data.Models
 {
     public class Arac
     {
-        [Key, Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
         public string Plaka { get; set; }
-
-        [Key, Column(Order = 1)]
         public string Tarih { get; set; }
         public string Marka { get; set; }
         public string Model { get; set; }
