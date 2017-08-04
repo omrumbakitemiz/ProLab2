@@ -29,6 +29,22 @@ namespace ProLab.GUI
             lbl_model.Text = string.Empty;
             lbl_tarih.Text = string.Empty;
         }
+    
+        private void btn_aracEkle_Click(object sender, EventArgs e)
+        {
+            _arac = new Arac()
+            {
+                Plaka = txb_plaka.Text,
+                Model = txb_model.Text,
+                Marka = txb_marka.Text,
+                Tarih = DateTime.Now.ToString()
+            };
+
+            lbl_plaka.Text = _arac.Plaka;
+            lbl_marka.Text = _arac.Marka;
+            lbl_model.Text = _arac.Model;
+            lbl_tarih.Text = _arac.Tarih;
+        }
 
         private void btn_kprtEkle_Click(object sender, EventArgs e)
         {
@@ -119,26 +135,10 @@ namespace ProLab.GUI
             Func(Controls);
         }
 
-        private void btn_aracEkle_Click(object sender, EventArgs e)
-        {
-            _arac = new Arac()
-            {
-                Plaka = txb_plaka.Text,
-                Model = txb_model.Text,
-                Marka = txb_marka.Text,
-                Tarih = DateTime.Now.ToString()
-            };
-
-            lbl_plaka.Text = _arac.Plaka;
-            lbl_marka.Text = _arac.Marka;
-            lbl_model.Text = _arac.Model;
-            lbl_tarih.Text = _arac.Tarih;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_secimGit_Click(object sender, EventArgs e)
         {
             Hide();
-            
+
             SecimSayfasi secimSayfasi = new SecimSayfasi();
             secimSayfasi.Show();
         }

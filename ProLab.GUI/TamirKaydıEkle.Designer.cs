@@ -100,7 +100,7 @@
             this.lbl_marka = new System.Windows.Forms.Label();
             this.lbl_model = new System.Windows.Forms.Label();
             this.btn_temizle = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_secimGit = new System.Windows.Forms.Button();
             this.lbl_tarih = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tab_AracEkle.SuspendLayout();
@@ -972,17 +972,17 @@
             this.btn_temizle.UseVisualStyleBackColor = true;
             this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
-            // button1
+            // btn_secimGit
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(694, 514);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 66);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Seçim Sayfasına Git";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_secimGit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_secimGit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secimGit.Location = new System.Drawing.Point(694, 514);
+            this.btn_secimGit.Name = "btn_secimGit";
+            this.btn_secimGit.Size = new System.Drawing.Size(140, 66);
+            this.btn_secimGit.TabIndex = 5;
+            this.btn_secimGit.Text = "Seçim Sayfasına Git";
+            this.btn_secimGit.UseVisualStyleBackColor = true;
+            this.btn_secimGit.Click += new System.EventHandler(this.btn_secimGit_Click);
             // 
             // lbl_tarih
             // 
@@ -1001,7 +1001,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(864, 607);
             this.Controls.Add(this.lbl_tarih);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_secimGit);
             this.Controls.Add(this.btn_temizle);
             this.Controls.Add(this.lbl_model);
             this.Controls.Add(this.lbl_marka);
@@ -1103,7 +1103,7 @@
         private System.Windows.Forms.TextBox txb_model;
         private System.Windows.Forms.TextBox txb_marka;
         private System.Windows.Forms.TextBox txb_plaka;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_secimGit;
         private System.Windows.Forms.Label lbl_tarih;
     }
 }

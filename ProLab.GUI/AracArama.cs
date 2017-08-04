@@ -39,15 +39,7 @@ namespace ProLab.GUI
         {
             VeriSorgula();
         }
-
-        private void btn_secimSayfasınaGit_Click(object sender, EventArgs e)
-        {
-            Hide();
-
-            SecimSayfasi secimSayfasi = new SecimSayfasi();
-            secimSayfasi.Show();
-        }
-
+        
         private void btn_kayitGuncelle_Click(object sender, EventArgs e)
         {
             var islemId = Convert.ToInt32(txb_islemID.Text);
@@ -124,6 +116,13 @@ namespace ProLab.GUI
             _ctx.SaveChanges();
 
             VeriSorgula();
+        }
+        private void btn_secimSayfasınaGit_Click(object sender, EventArgs e)
+        {
+            Hide();
+
+            SecimSayfasi secimSayfasi = new SecimSayfasi();
+            secimSayfasi.Show();
         }
     }
 }
