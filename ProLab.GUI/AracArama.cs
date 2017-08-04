@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Data;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ProLab.GUI.Data.Context;
 using ProLab.GUI.Data.Models;
