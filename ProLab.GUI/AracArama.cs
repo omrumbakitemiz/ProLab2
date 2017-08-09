@@ -14,6 +14,7 @@ namespace ProLab.GUI
         public AracArama()
         {
             InitializeComponent();
+            comboBox_islemDurumu.DataSource = Enum.GetValues(typeof(Durum));
         }
 
         private void VeriSorgula()
@@ -43,42 +44,25 @@ namespace ProLab.GUI
         private void btn_kayitGuncelle_Click(object sender, EventArgs e)
         {
             var islemId = Convert.ToInt32(txb_islemID.Text);
-            var islemDurumutemp = txb_islemDurumu.Text;
-            var islemDurumu = Durum.TamirBaslamadi;
             var islemAdi = comboBox_islemAdi.SelectedItem.ToString();
-
-            #region İşlemDurumu Kontrolü
-            if (islemDurumutemp == "0")
-            {
-                islemDurumu = Durum.TamirBaslamadi;
-            }
-            if (islemDurumutemp == "1")
-            {
-                islemDurumu = Durum.TamirEdiliyor;
-            }
-            if (islemDurumutemp == "2")
-            {
-                islemDurumu = Durum.TamirBitti;
-            }
-            
-            #endregion
+            var secilenIslemDurumu = (Durum)comboBox_islemDurumu.SelectedItem;
 
             #region İşlemAdi Kontrolü
             if (islemAdi == "Kaporta")
             {
-                _ctx.KaportaIslemleri.First(p => p.KaportaIslemID == islemId).Durum = islemDurumu;
+                _ctx.KaportaIslemleri.First(p => p.KaportaIslemID == islemId).Durum = secilenIslemDurumu;
             }
             if (islemAdi == "Elektrik")
             {
-                _ctx.ElektrikIslemleri.First(p => p.ElektrikIslemID == islemId).Durum = islemDurumu;
+                _ctx.ElektrikIslemleri.First(p => p.ElektrikIslemID == islemId).Durum = secilenIslemDurumu;
             }
             if (islemAdi == "Motor")
             {
-                _ctx.MotorIslemleri.First(p => p.MotorIslemID == islemId).Durum = islemDurumu;
+                _ctx.MotorIslemleri.First(p => p.MotorIslemID == islemId).Durum = secilenIslemDurumu;
             }
             if (islemAdi == "Lastik")
             {
-                _ctx.LastikIslemleri.First(p => p.LastikIslemID == islemId).Durum = islemDurumu;
+                _ctx.LastikIslemleri.First(p => p.LastikIslemID == islemId).Durum = secilenIslemDurumu;
             }
             #endregion
 
